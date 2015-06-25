@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/toolbar"></include>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 内容界面 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/drawer_item"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick_Find"
+                android:text="找厕所"
+                android:textSize="22sp" />
+
+
+
+        </LinearLayout>
+
+        <!-- 侧滑菜单内容 -->
+
+        <LinearLayout
+            android:id="@+id/drawer_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#ffffffff"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_home"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/drawer_item"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:onClick="onClick_Home"
+                android:text="@string/home"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tv_collect"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/drawer_item"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:text="@string/collect"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+    </android.support.v4.widget.DrawerLayout>
+
+
+</LinearLayout>
